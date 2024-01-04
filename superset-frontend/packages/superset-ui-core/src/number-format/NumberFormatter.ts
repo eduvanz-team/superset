@@ -65,6 +65,7 @@ class NumberFormatter extends ExtensibleFunction {
   }
 
   format(value: number | null | undefined) {
+
     if (value === null || value === undefined || Number.isNaN(value)) {
       return `${value}`;
     }
@@ -75,7 +76,16 @@ class NumberFormatter extends ExtensibleFunction {
       return '-∞';
     }
 
-    return this.formatFunc(value);
+    if (value < 10000) {
+      return this.formatFunc(value);
+    } else {
+      if (value > 9999999) {
+        return this.formatFunc(value / 10000000) + ' Cr';
+      } else {
+        return this.formatFunc(value / 1000000) + ' L';
+      }
+    }
+
   }
 
   preview(value = PREVIEW_VALUE) {

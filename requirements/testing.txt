@@ -101,7 +101,7 @@ pathable==0.4.3
     # via jsonschema-spec
 playwright==1.37.0
     # via apache-superset
-prophet==1.1.1
+#prophet==1.1.1
     # via apache-superset
 proto-plus==1.22.2
     # via

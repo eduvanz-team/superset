@@ -81,6 +81,10 @@ test-changelog.md
 plugins/*/package-lock.json
 packages/*/package-lock.json
 
+#ssh keys
+*.keys
+*.keys.pub
+
 # For country map geojson conversion script
 .ipynb_checkpoints/
 scripts/*.zip
